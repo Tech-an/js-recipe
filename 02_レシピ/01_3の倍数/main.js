@@ -1,13 +1,12 @@
-const maxNum = 24
-
-const genkiFunc = (maxNum) => {
-  for (let i = 1; i <= maxNum; i++) {
-    console.log(specialStrOnly3Multiple(i))
-  }
+const FizzBuzz = (num) => {
+  return num % 15 == 0
+    ? "FizzBuzz"
+    : num % 5 == 0
+    ? "Buzz"
+    : num % 3 == 0
+    ? "Fizz"
+    : num
 }
 
-const specialStrOnly3Multiple = (num) => {
-  return num % 3 === 0 ? `${num}!!!!!` : num
-}
-
-genkiFunc(maxNum)
+const maxNum = 30
+for (let i = 1; i <= maxNum; i++) console.log(FizzBuzz(i))
