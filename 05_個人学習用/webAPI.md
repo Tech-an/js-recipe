@@ -19,6 +19,20 @@ WebAPIの使い方
 各WebAPIの使い方
 > 「公式ドキュメントにすべてが記されている！」
 
+
+WebAPIのコードの仕組み
+ひとつめのthen()では、レスポンスresに含まれるデータを JSON として読み込んでオブジェクトに変換。
+そして、ふたつめのthen()に渡している（以下コード参照）。
+
+fetch("https://dog.ceo/api/breeds/image/random")
+  .then((res) => {
+    return res.json() // 結果を json として読み込んで、次の then に渡す
+  })
+  // 1つめのthenでreturnした値が2つめのthenの引数(data)に渡されている
+  .then((data) => {
+    imageElement.src = data.message // 画像を表示する
+  })
+
 ```
 
 # 用語メモ
