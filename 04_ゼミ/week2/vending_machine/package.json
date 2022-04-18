@@ -1,0 +1,16 @@
+{
+  "name": "webexpert",
+  "version": "1.0.0",
+  "description": "GeekSalon WebExpertコースで使うためのテンプレートです。",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo This is a static template, there is no bundler or bundling involved!"
+  },
+  "keywords": [],
+  "author": "Junsei Nagao",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^11.2.0"
+  }
+}
