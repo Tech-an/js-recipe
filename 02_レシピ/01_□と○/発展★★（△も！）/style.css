@@ -1,0 +1,25 @@
+/* □を描画するためのコード */
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+/* 〇を描画するためのコード */
+.rounded {
+  border-radius: 50px;
+}
+
+/* △を描画するためのコード */
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 85px solid black;
+}
+
+/* アニメーション */
+.transition {
+  transition: all 1s;
+}
