@@ -1,12 +1,34 @@
 const addButton = document.getElementById("add-button")
 const memoInput = document.getElementById("memo-input")
+const memoContainer = document.getElementById("memo-container")
 
 addButton.onclick = () => {
-  //   console.dir(memoInput)
-  console.log(memoInput.value)
-  const memoContainer = document.getElementById("memo-container")
-  const div = document.createElement("div")
-  div.textContent = memoInput.value
+  addToDo(memoInput.value)
+}
+
+function addToDo(value) {
+  const memoBlock = document.createElement("div")
+  memoBlock.id = "flex"
+  const inputForm = document.createElement("div")
+  const deleteButton = document.createElement("button")
+  deleteButton.textContent = "削除"
+  deleteButton.onclick = () => {
+    deleteToDo(memoContainer, memoBlock)
+  }
+
+  inputForm.textContent = value
+  appendToDo(memoBlock, [inputForm, deleteButton])
+
   memoInput.value = "" // 発展★（inputタグ）
-  memoContainer.appendChild(div)
+  memoContainer.appendChild(memoBlock)
+}
+
+function deleteToDo(parentNode, childNode) {
+  parentNode.removeChild(childNode)
+}
+
+function appendToDo(parentNode, childNodes) {
+  childNodes.forEach((childNode) => {
+    parentNode.appendChild(childNode)
+  })
 }
