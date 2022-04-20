@@ -11,7 +11,6 @@ function toMorseCode(str) {
     } else if (arr[i] === "0") {
       output += "-"
     }
-    console.log(`${arr[i]}, ${output}`)
   }
   return output
 
