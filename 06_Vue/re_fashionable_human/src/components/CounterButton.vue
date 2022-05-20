@@ -1,6 +1,6 @@
 <template>
   <!-- ボタンを作る -->
-  <button v-on:click="countUp"><slot></slot></button>
+  <button v-on:click="countUp"><slot>カウンターx</slot></button>
   <div>
     <p>カウント</p>
     <p>{{ count }}</p>
